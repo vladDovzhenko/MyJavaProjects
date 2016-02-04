@@ -30,7 +30,7 @@ public class DataInput extends Main {
                     L.add(str1);
                     winner = true;
                 }
-            } catch (Exception e) {
+            } catch (NumberFormatException e) {
                 System.out.println("Попробуйте еще раз!");
             }
 
@@ -51,7 +51,7 @@ public class DataInput extends Main {
                     N.add(str2);
                     winner = true;
                 }
-            } catch (Exception e) {
+            } catch (NumberFormatException e) {
                 System.out.println("Попробуйте еще раз!");
             }
 
@@ -59,18 +59,18 @@ public class DataInput extends Main {
     }
 
     void profession(ArrayList P) {
-        String error = "Error:Слишком длинное название!";
         do {
             System.out.print("Введите название профессии:");
             String str3 = sc.nextLine();
             try {
-                if (str3.length() > 1) {
-                    System.err.println(error);
-                    winner = false;
+                if (str3.length() == 1 && str3.matches("[A-Z]")) {
+                    winner=true;
                 }
-                if (str3.length() == 1) {
-                    P.add(str3);
-                    winner = true;
+                if(str3.length()>1){
+                    String error = "Error:Слишком длинное название!";
+                }
+                else {
+                    winner=false;
                 }
             } catch (Exception e) {
                 System.out.println("Попробуйте еще раз!");
