@@ -20,7 +20,7 @@ public class DataInput extends Main {
         String error = "Error:Слишком длинная фамилия!";
         do {
             System.out.print("Введите фамилию:");
-            String str1 = sc.next();
+            String str1 = sc.nextLine();
             try {
                 if (str1.length() > 15) {
                     System.err.println(error);
@@ -41,7 +41,7 @@ public class DataInput extends Main {
         String error = "Error:Слишком длинное имя!";
         do {
             System.out.print("Введите имя:");
-            String str2 = sc.next();
+            String str2 = sc.nextLine();
             try {
                 if (str2.length() > 15) {
                     System.err.println(error);
@@ -62,7 +62,7 @@ public class DataInput extends Main {
         String error = "Error:Слишком длинное название!";
         do {
             System.out.print("Введите название профессии:");
-            String str3 = sc.next();
+            String str3 = sc.nextLine();
             try {
                 if (str3.length() > 1) {
                     System.err.println(error);
@@ -83,7 +83,7 @@ public class DataInput extends Main {
         double weight = 0;
         do {
             System.out.print("Вес:");
-            String str4 = sc.next();
+            String str4 = sc.nextLine();
             try {
                 weight = Double.parseDouble(str4);
                 if (weight>0) {
@@ -103,7 +103,7 @@ public class DataInput extends Main {
         boolean win=false;
         while (win != true) {
             System.out.print("Если хотите продолжить нажмите 1,если нет то 2:");
-            String str = sc.next();
+            String str = sc.nextLine();
             try {
                 number = Integer.parseInt(str);
                 if (number == 1 || number ==2) {

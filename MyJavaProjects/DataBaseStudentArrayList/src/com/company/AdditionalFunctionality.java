@@ -21,7 +21,7 @@ public class AdditionalFunctionality extends Main {
         do {
             System.out.println("Ваш выбор:");
             String LineSelect = "";
-            LineSelect = sc.next();
+            LineSelect = sc.nextLine();
             try {
                 if (LineSelect.length() == 1) {
                     select = Integer.parseInt(LineSelect);
@@ -69,7 +69,7 @@ public class AdditionalFunctionality extends Main {
         while (win != true) {
             System.out.println("Вы выбрали удаление");
             System.out.print("Какую строку вы хотите удалить:");
-            String str = sc.next();
+            String str = sc.nextLine();
             try {
                 n = Integer.parseInt(str);
                 if (n >= 0 && n <= LastName.size()) {
@@ -95,7 +95,7 @@ public class AdditionalFunctionality extends Main {
         win=false;
         while (win != true) {
             System.out.println("Выйти(1),вернуться в доп.функционал(2)");
-            String str = sc.next();
+            String str = sc.nextLine();
             try {
                 n = Integer.parseInt(str);
                 if (n == 1 || n ==2) {
@@ -126,7 +126,7 @@ public class AdditionalFunctionality extends Main {
         int selectInt=0;
         while (m.winner!=true) {
             System.out.print("В какой строке вы хотите поменять атрибут:");
-            String str=sc.next();
+            String str=sc.nextLine();
             try {
                 size = Integer.parseInt(str);
                 m.winner=true;
@@ -143,7 +143,7 @@ public class AdditionalFunctionality extends Main {
                 "4)Вес;");
         while (m.winner!=true) {
             System.out.print("Ваш выбор:");
-            String select=sc.next();
+            String select=sc.nextLine();
             try {
                 selectInt = Integer.parseInt(select);
                 m.winner=true;
@@ -207,7 +207,7 @@ public class AdditionalFunctionality extends Main {
         }
         while (win != true) {
             System.out.println("Выйти(1),вернуться в доп.функционал(2)");
-            String str = sc.next();
+            String str = sc.nextLine();
             try {
                 n = Integer.parseInt(str);
                 if (n == 1 || n ==2) {
@@ -232,13 +232,14 @@ public class AdditionalFunctionality extends Main {
         int n=0;
         do {
             System.out.print("Какую строку вы хотите вывести:");
-            String str = sc.next();
+            String str = sc.nextLine();
             try {
                 n = Integer.parseInt(str);
                 if (n >= 0 && n <= i) {
                     win = true;
                 }
                 else {
+                    System.out.println("Попробуйте еще раз!");
                     win=false;
                 }
             } catch (NumberFormatException e) {
@@ -254,7 +255,7 @@ public class AdditionalFunctionality extends Main {
         win=false;
         while (win != true) {
             System.out.println("Выйти(1),вернуться в доп.функционал(2)");
-            String str = sc.next();
+            String str = sc.nextLine();
             try {
                 n = Integer.parseInt(str);
                 if (n == 1 || n ==2) {

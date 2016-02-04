@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f5fe3de5-3633-49a8-b76d-35a6abe8576c" name="Default" comment="" />
+    <list default="true" id="f5fe3de5-3633-49a8-b76d-35a6abe8576c" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+    </list>
     <ignored path="DataBaseStudentArrayList.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -22,11 +24,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="19" column="56" selection-start-line="19" selection-start-column="56" selection-end-line="19" selection-end-column="56" />
+            <state vertical-scroll-proportion="0.39011705">
+              <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -38,9 +40,8 @@
         <entry file="file://$PROJECT_DIR$/src/com/company/DataInput.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+              <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
               <folding>
-                <element signature="imports" expanded="true" />
                 <element signature="docComment;class#DataInput#0" expanded="false" />
                 <element signature="method#enter#0;class#DataInput#0" expanded="false" />
                 <element signature="method#lastName#0;class#DataInput#0" expanded="false" />
@@ -53,23 +54,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../ygadayka/src/com/company/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="AdditionalFunctionality.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/AdditionalFunctionality.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="95" column="7" selection-start-line="95" selection-start-column="7" selection-end-line="115" selection-end-column="9" />
+              <caret line="229" column="104" selection-start-line="229" selection-start-column="104" selection-end-line="229" selection-end-column="104" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#remove#0;class#AdditionalFunctionality#0" expanded="false" />
+                <element signature="method#set#0;class#AdditionalFunctionality#0" expanded="false" />
                 <element signature="method#Swap#0;class#AdditionalFunctionality#0" expanded="false" />
                 <element signature="method#AddStudent#0;class#AdditionalFunctionality#0" expanded="false" />
                 <element signature="method#DisplayedOnlyLastName#0;class#AdditionalFunctionality#0" expanded="false" />
@@ -98,6 +91,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
       <projects_view />
@@ -120,7 +116,7 @@
     <option name="width" value="1938" />
     <option name="height" value="1048" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
@@ -145,8 +141,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -185,7 +182,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="RunManager" selected="Application.Main">
@@ -452,7 +448,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -461,10 +457,10 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.06928407" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32955772" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -491,7 +487,15 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/company/DataInput.java</url>
+          <line>61</line>
+          <properties />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="2" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -500,6 +504,56 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/DataInput.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+          <folding>
+            <element signature="docComment;class#DataInput#0" expanded="false" />
+            <element signature="method#enter#0;class#DataInput#0" expanded="false" />
+            <element signature="method#lastName#0;class#DataInput#0" expanded="false" />
+            <element signature="method#name#0;class#DataInput#0" expanded="false" />
+            <element signature="method#profession#0;class#DataInput#0" expanded="false" />
+            <element signature="method#weight#0;class#DataInput#0" expanded="false" />
+            <element signature="method#select#0;class#DataInput#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/AdditionalFunctionality.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="95" column="7" selection-start-line="95" selection-start-column="7" selection-end-line="115" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#remove#0;class#AdditionalFunctionality#0" expanded="false" />
+            <element signature="method#set#0;class#AdditionalFunctionality#0" expanded="false" />
+            <element signature="method#Swap#0;class#AdditionalFunctionality#0" expanded="false" />
+            <element signature="method#AddStudent#0;class#AdditionalFunctionality#0" expanded="false" />
+            <element signature="method#DisplayedOnlyLastName#0;class#AdditionalFunctionality#0" expanded="false" />
+            <element signature="method#DisplayedInformStudent#0;class#AdditionalFunctionality#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/OutPut.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="9" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -515,7 +569,6 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="9" column="93" selection-start-line="9" selection-start-column="93" selection-end-line="9" selection-end-column="93" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="docComment;class#DataInput#0" expanded="false" />
             <element signature="method#enter#0;class#DataInput#0" expanded="false" />
             <element signature="method#lastName#0;class#DataInput#0" expanded="false" />
@@ -533,6 +586,8 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#remove#0;class#AdditionalFunctionality#0" expanded="false" />
+            <element signature="method#set#0;class#AdditionalFunctionality#0" expanded="false" />
             <element signature="method#Swap#0;class#AdditionalFunctionality#0" expanded="false" />
             <element signature="method#AddStudent#0;class#AdditionalFunctionality#0" expanded="false" />
             <element signature="method#DisplayedOnlyLastName#0;class#AdditionalFunctionality#0" expanded="false" />
@@ -572,7 +627,6 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="19" column="9" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="docComment;class#DataInput#0" expanded="false" />
             <element signature="method#enter#0;class#DataInput#0" expanded="false" />
             <element signature="method#lastName#0;class#DataInput#0" expanded="false" />
@@ -590,6 +644,8 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#remove#0;class#AdditionalFunctionality#0" expanded="false" />
+            <element signature="method#set#0;class#AdditionalFunctionality#0" expanded="false" />
             <element signature="method#Swap#0;class#AdditionalFunctionality#0" expanded="false" />
             <element signature="method#AddStudent#0;class#AdditionalFunctionality#0" expanded="false" />
             <element signature="method#DisplayedOnlyLastName#0;class#AdditionalFunctionality#0" expanded="false" />
@@ -621,7 +677,6 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="docComment;class#DataInput#0" expanded="false" />
             <element signature="method#enter#0;class#DataInput#0" expanded="false" />
             <element signature="method#lastName#0;class#DataInput#0" expanded="false" />
@@ -639,6 +694,8 @@
           <caret line="85" column="23" selection-start-line="85" selection-start-column="23" selection-end-line="85" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#remove#0;class#AdditionalFunctionality#0" expanded="false" />
+            <element signature="method#set#0;class#AdditionalFunctionality#0" expanded="false" />
             <element signature="method#Swap#0;class#AdditionalFunctionality#0" expanded="false" />
             <element signature="method#AddStudent#0;class#AdditionalFunctionality#0" expanded="false" />
             <element signature="method#DisplayedOnlyLastName#0;class#AdditionalFunctionality#0" expanded="false" />
@@ -670,7 +727,6 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="9" column="105" selection-start-line="9" selection-start-column="105" selection-end-line="9" selection-end-column="105" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="docComment;class#DataInput#0" expanded="false" />
             <element signature="method#enter#0;class#DataInput#0" expanded="false" />
             <element signature="method#lastName#0;class#DataInput#0" expanded="false" />
@@ -688,6 +744,8 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#remove#0;class#AdditionalFunctionality#0" expanded="false" />
+            <element signature="method#set#0;class#AdditionalFunctionality#0" expanded="false" />
             <element signature="method#Swap#0;class#AdditionalFunctionality#0" expanded="false" />
             <element signature="method#AddStudent#0;class#AdditionalFunctionality#0" expanded="false" />
             <element signature="method#DisplayedOnlyLastName#0;class#AdditionalFunctionality#0" expanded="false" />
@@ -696,10 +754,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../ArrayList/src/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/com/company/AdditionalFunctionality.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.24297924">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="229" column="104" selection-start-line="229" selection-start-column="104" selection-end-line="229" selection-end-column="104" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#remove#0;class#AdditionalFunctionality#0" expanded="false" />
+            <element signature="method#set#0;class#AdditionalFunctionality#0" expanded="false" />
+            <element signature="method#Swap#0;class#AdditionalFunctionality#0" expanded="false" />
+            <element signature="method#AddStudent#0;class#AdditionalFunctionality#0" expanded="false" />
+            <element signature="method#DisplayedOnlyLastName#0;class#AdditionalFunctionality#0" expanded="false" />
+            <element signature="method#DisplayedInformStudent#0;class#AdditionalFunctionality#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -711,36 +778,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="56" selection-start-line="19" selection-start-column="56" selection-end-line="19" selection-end-column="56" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/AdditionalFunctionality.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="95" column="7" selection-start-line="95" selection-start-column="7" selection-end-line="115" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#Swap#0;class#AdditionalFunctionality#0" expanded="false" />
-            <element signature="method#AddStudent#0;class#AdditionalFunctionality#0" expanded="false" />
-            <element signature="method#DisplayedOnlyLastName#0;class#AdditionalFunctionality#0" expanded="false" />
-            <element signature="method#DisplayedInformStudent#0;class#AdditionalFunctionality#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/DataInput.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+          <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="docComment;class#DataInput#0" expanded="false" />
             <element signature="method#enter#0;class#DataInput#0" expanded="false" />
             <element signature="method#lastName#0;class#DataInput#0" expanded="false" />
@@ -752,11 +794,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../ygadayka/src/com/company/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="0.39011705">
+          <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
