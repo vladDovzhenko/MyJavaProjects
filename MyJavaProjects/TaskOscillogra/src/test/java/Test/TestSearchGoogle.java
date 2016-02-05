@@ -15,6 +15,7 @@ public class TestSearchGoogle {
     WebDriver driver;
     Page page;
 
+
     @BeforeTest
     public void setup(){
          driver=new FirefoxDriver();
@@ -25,8 +26,9 @@ public class TestSearchGoogle {
     @Test
     public void navigateToGoogle()throws Exception{
         page=new Page(driver);
-        page.textForInputField("осцилограф");
+        page.textForInputField("осциллограф");
         page.additionsMethod();
     }
+
 
 }

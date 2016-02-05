@@ -3,6 +3,9 @@ package org.test.pageobject;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 /**
  * Created by Vlad on 04.02.2016.
@@ -10,10 +13,15 @@ import org.openqa.selenium.WebDriver;
 public class FindElement {
     WebDriver driver;
     int indexPage = 1;
+
     By elementSearch = By.xpath("//cite[contains(text(),\"vit.ua\")]");
-    By nextButton=By.xpath(".//*[@id='pnnext']/span[1]");
+
+    @FindBy(xpath = ".//*[@id='pnnext']/span[1]")
+    WebElement nextButton;
+
     public FindElement(WebDriver driver){
         this.driver = driver;
+        PageFactory.initElements(driver, this);
     }
 
     public void findElemementByPages() {
@@ -27,7 +35,7 @@ public class FindElement {
                 indexPage++;
                 System.out.println("Navigating on page " + indexPage);
                 try {
-                    driver.findElement(nextButton).click();
+                    nextButton.click();
                 } catch (NoSuchElementException e) {
                     System.out.println("VIT.ua not found!");
                 }
