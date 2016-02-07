@@ -1,7 +1,8 @@
 package com.company;
 
 import java.util.ArrayList;
-import java.util.jar.Attributes;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * Created by Vlad on 29.01.2016.
@@ -17,92 +18,72 @@ public class DataInput extends Main {
         }
     }
     void lastName(ArrayList L) {
-        String error = "Error:Слишком длинная фамилия!";
+        String s = null;
+        Pattern p = Pattern.compile("[A-Z]{1}[a-z]{1,15}\\b");
+        Matcher l = null;
         do {
-            System.out.print("Введите фамилию:");
-            String str1 = sc.nextLine();
-            try {
-                if (str1.length() > 15) {
-                    System.err.println(error);
-                    winner = false;
-                }
-                if (str1.length() <= 15) {
-                    L.add(str1);
-                    winner = true;
-                }
-            } catch (NumberFormatException e) {
-                System.out.println("Попробуйте еще раз!");
+            System.out.print("Enter lastname:");
+            s = sc.nextLine();
+            l = p.matcher(s);
+            if (!l.matches()) {
+                System.out.println("Try again!");
             }
-
-        } while (winner != true);
+        } while (!l.matches());
+        String lastname = String.valueOf(s);
+        L.add(lastname);
     }
 
     void name(ArrayList N) {
-        String error = "Error:Слишком длинное имя!";
+        String s=null;
+        Pattern p = Pattern.compile("[A-Z]{1}[a-z]{1,15}\\b");
+        Matcher l = null;
         do {
-            System.out.print("Введите имя:");
-            String str2 = sc.nextLine();
-            try {
-                if (str2.length() > 15) {
-                    System.err.println(error);
-                    winner = false;
-                }
-                if (str2.length() <= 15) {
-                    N.add(str2);
-                    winner = true;
-                }
-            } catch (NumberFormatException e) {
-                System.out.println("Попробуйте еще раз!");
+            System.out.print("Enter name:");
+            s = sc.nextLine();
+            l = p.matcher(s);
+            if(!l.matches()){
+                System.out.println("Try again!");
             }
-
-        } while (winner != true);
+        } while (!l.matches());
+        String name=String.valueOf(s);
+        N.add(name);
     }
 
     void profession(ArrayList P) {
+        String s=null;
+        Pattern p = Pattern.compile("\\A[A-Z]{1}\\b");
+        Matcher l = null;
         do {
-            System.out.print("Введите название профессии:");
-            String str3 = sc.nextLine();
-            try {
-                if (str3.length() == 1 && str3.matches("[A-Z]")) {
-                    winner=true;
-                }
-                if(str3.length()>1){
-                    String error = "Error:Слишком длинное название!";
-                }
-                else {
-                    winner=false;
-                }
-            } catch (Exception e) {
-                System.out.println("Попробуйте еще раз!");
+            System.out.print("Enter the profession:");
+                s = sc.nextLine();
+                l = p.matcher(s);
+            if(!l.matches()){
+                System.out.println("Try again!");
             }
-
-        } while (winner != true);
+        } while (!l.matches());
+        String profession=String.valueOf(s);
+        P.add(profession);
     }
 
     void weight(ArrayList W) {
-        double weight = 0;
+        String s=null;
+        Pattern p = Pattern.compile("([0-9]{1,}[.][0-9]{1,2})|([0-9]{1,})");
+        Matcher l = null;
         do {
-            System.out.print("Вес:");
-            String str4 = sc.nextLine();
-            try {
-                weight = Double.parseDouble(str4);
-                if (weight>0) {
-                    winner = true;
-                    W.add(weight);
-                }
-                if (weight <= 0) {
-                    winner = false;
-                }
-            } catch (NumberFormatException e) {
-                System.out.println("Попробуйте еще раз.");
-                winner=false;
+            System.out.print("Enter weight:");
+            s = sc.nextLine();
+            l = p.matcher(s);
+            if(!l.matches()){
+                System.out.println("Try again!");
             }
-        } while (winner != true);
+        } while (!l.matches());
+        double weight=Double.parseDouble(s);
+        W.add(weight);
     }
     int  select(){
         boolean win=false;
         while (win != true) {
-            System.out.print("Если хотите продолжить нажмите 1,если нет то 2:");
+            System.out.print("If you want to continue click(1),no(2):");
             String str = sc.nextLine();
             try {
                 number = Integer.parseInt(str);
@@ -110,6 +91,7 @@ public class DataInput extends Main {
                     win=true;
                 }
                 else {
+                    System.out.println("Попробуйте еще раз!");
                     win=false;
                 }
             } catch (NumberFormatException e) {

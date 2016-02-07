@@ -11,7 +11,7 @@ public class Main  {
     int number,i;
     Scanner sc=new Scanner(System.in);
     boolean winner=false;
-    String error="Попробуйте еще раз";
+    String error="Try again";
     public static void main(String[] args) {
         Main m=new Main();
         OutPut op=new OutPut();

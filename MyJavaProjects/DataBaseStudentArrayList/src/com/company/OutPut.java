@@ -7,13 +7,12 @@ import java.util.ArrayList;
  */
 public class OutPut extends Main{
     void output(ArrayList LastName, ArrayList Name, ArrayList Profession, ArrayList Weight){
-        int size=0;
         for (int i = 0; i < LastName.size(); i++) {
             System.out.print("№"+LastName.indexOf(LastName.get(i)));
-            System.out.print("    Фамилия:" + (LastName.get(i)));
-            System.out.print("    Имя:" + (Name.get(i)));
-            System.out.print("    Профессия:" + (Profession.get(i)));
-            System.out.print("    Вес:" + (Weight.get(i)) + "\n");
+            System.out.print("    Lastname:" + (LastName.get(i)));
+            System.out.print("    Name:" + (Name.get(i)));
+            System.out.print("    Profession:" + (Profession.get(i)));
+            System.out.print("    Weight:" + (Weight.get(i)) + "\n");
             System.out.println();
         }
     }

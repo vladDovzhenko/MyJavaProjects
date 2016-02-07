@@ -3,39 +3,34 @@ package com.company;
 import javax.print.attribute.standard.MediaSize;
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * Created by Vlad on 29.01.2016.
  */
 public class AdditionalFunctionality extends Main {
     void Select(ArrayList LastName, ArrayList Name, ArrayList Profession, ArrayList Weight) {
-        System.out.println("Дополнительный Функционал:");
-        System.out.println("1)Удаление строки.\n" +
-                "2)Замена атрибута.\n" +
-                "3)Смена местами студентов в списке\n" +
-                "4)Добавление студента\n" +
-                "5)Отображение списка всех студентов (только фамилии)\n" +
-                "6)Отобразить полную информацию о студенте путем ввода его порядкового номера\n" +
-                "7)Ничего не менять,оставить так как есть");
+        System.out.println("Additional functionality:");
+        System.out.println("1)Delete line.\n" +
+                "2)Replacement attribute.\n" +
+                "3)Add student.\n" +
+                "4)Displays a list of all students(only lastname)\n" +
+                "5)To display detailed information about the student by entering its serial number\n" +
+                "6)Not to change anything");
         int select = 0;
+        String s=null;
+        Pattern p = Pattern.compile("[1-6]{1}");
+        Matcher l = null;
         do {
-            System.out.println("Ваш выбор:");
-            String LineSelect = "";
-            LineSelect = sc.nextLine();
-            try {
-                if (LineSelect.length() == 1) {
-                    select = Integer.parseInt(LineSelect);
-                    if (select > 0 && select <= 6) {
-                        winner = true;
-
-                    }
-                } else {
-                    winner = false;
-                }
-            } catch (Exception e) {
-                System.out.println(error);
+            System.out.print("Your choise:");
+            s = sc.nextLine();
+            l = p.matcher(s);
+            if(!l.matches()){
+                System.out.println("Try again!");
             }
-        } while (winner != true);
+        } while (!l.matches());
+        select=Integer.parseInt(s);
         switch (select) {
             case 1:
                 remove(LastName, Name, Profession, Weight);
@@ -44,18 +39,15 @@ public class AdditionalFunctionality extends Main {
                 set(number,i, LastName, Name, Profession, Weight);
                 break;
             case 3:
-                Swap();
-                break;
-            case 4:
                 AddStudent(LastName, Name, Profession, Weight);
                 break;
-            case 5:
+            case 4:
                 DisplayedOnlyLastName(LastName, Name, Profession, Weight);
                 break;
-            case 6:
+            case 5:
                 DisplayedInformStudent(LastName, Name, Profession, Weight);
                 break;
-            case 7:
+            case 6:
                 System.exit(0);
 
         }
@@ -67,16 +59,20 @@ public class AdditionalFunctionality extends Main {
         boolean win=false;
         int n=0;
         while (win != true) {
-            System.out.println("Вы выбрали удаление");
-            System.out.print("Какую строку вы хотите удалить:");
+            System.out.println("Remove!");
+            System.out.print("Which line you want to delete:");
             String str = sc.nextLine();
             try {
                 n = Integer.parseInt(str);
                 if (n >= 0 && n <= LastName.size()) {
                     win = true;
                 }
+                if(n>LastName.size()){
+                    System.out.println("Try again!");
+                    win=false;
+                }
             } catch (NumberFormatException e) {
-                System.out.println("Попробуйте еще раз!");
+                System.out.println("Try again!");
                 win = false;
             }
         }
@@ -86,15 +82,15 @@ public class AdditionalFunctionality extends Main {
             Weight.remove(n);
             for (i = 0; i < LastName.size(); i++) {
                 System.out.print("№" + LastName.indexOf(LastName.get(i)));
-                System.out.print("    Фамилия:" + (LastName.get(i)));
-                System.out.print("    Имя:" + (Name.get(i)));
-                System.out.print("    Профессия:" + (Profession.get(i)));
-                System.out.print("    Вес:" + (Weight.get(i)) + "\n");
+                System.out.print("    Lastname:" + (LastName.get(i)));
+                System.out.print("    Name:" + (Name.get(i)));
+                System.out.print("    Profession:" + (Profession.get(i)));
+                System.out.print("    Weight:" + (Weight.get(i)) + "\n");
                 System.out.println();
             }
         win=false;
         while (win != true) {
-            System.out.println("Выйти(1),вернуться в доп.функционал(2)");
+            System.out.println("Exit(1),return to additional functionality(2)");
             String str = sc.nextLine();
             try {
                 n = Integer.parseInt(str);
@@ -105,12 +101,17 @@ public class AdditionalFunctionality extends Main {
                     if(n==2){
                         Select(LastName,Name,Profession,Weight);
                     }
+                    win=true;
+                }
+                if(n<1&&n>2){
+                    System.out.println("Try again!");
+                    win = false;
                 }
                 else {
                     win=false;
                 }
             } catch (NumberFormatException e) {
-                System.out.println("Попробуйте еще раз!");
+                System.out.println("Try again!");
                 win = false;
             }
         }
@@ -125,7 +126,7 @@ public class AdditionalFunctionality extends Main {
         OutPut o=new OutPut();
         int selectInt=0;
         while (m.winner!=true) {
-            System.out.print("В какой строке вы хотите поменять атрибут:");
+            System.out.print("In which line you want to change an attribute:");
             String str=sc.nextLine();
             try {
                 size = Integer.parseInt(str);
@@ -136,17 +137,25 @@ public class AdditionalFunctionality extends Main {
             }
         }
         m.winner=false;
-        System.out.println("Какой атрибут вы хотите поменять:\n" +
-                "1)Фамилию;\n" +
-                "2)Имя;\n" +
-                "3)Профессию;\n" +
-                "4)Вес;");
+        System.out.println("\n" +
+                "Which attribute you want to change:\n" +
+                "1)Lastname;\n" +
+                "2)Name;\n" +
+                "3)Profession;\n" +
+                "4)Weight;");
         while (m.winner!=true) {
-            System.out.print("Ваш выбор:");
+            System.out.print("Your choice:");
             String select=sc.nextLine();
             try {
                 selectInt = Integer.parseInt(select);
                 m.winner=true;
+                if (selectInt<1&&selectInt>4){
+                    System.out.println("Try again");
+                    m.winner=false;
+                }
+                else{
+                    m.winner=true;
+                }
 
             } catch (Exception e) {
                 System.out.println(error);
@@ -154,39 +163,36 @@ public class AdditionalFunctionality extends Main {
         }
         switch (selectInt){
             case 1:{
-                System.out.print("Введите новый атрибут:");
+                System.out.print("Enter the new attribute:");
                 String newAttribute=sc.next();
                 LastName.set(size,newAttribute);
                 o.output(LastName,Name,Profession,Weight);
                 break;
             }
             case 2:{
-                System.out.print("Введите новый атрибут:");
+                System.out.print("Enter the new attribute:");
                 String newAttribute=sc.next();
                 Name.set(size,newAttribute);
                 o.output(LastName,Name,Profession,Weight);
                 break;
             }
             case 3:{
-                System.out.print("Введите новый атрибут:");
+                System.out.print("Enter the new attribute:");
                 String newAttribute=sc.next();
                 Profession.set(size,newAttribute);
                 o.output(LastName,Name,Profession,Weight);
                 break;
             }
             case 4:{
-                System.out.print("Введите новый атрибут:");
+                System.out.print("Enter the new attribute:");
                 String newAttribute=sc.next();
                 Weight.set(size,newAttribute);
                 o.output(LastName,Name,Profession,Weight);
                 break;
             }
         }
-        System.out.println("Изменения внесены!");
+        System.out.println("Changes applied!");
         Select(LastName,Name,Profession,Weight);
-
-    }
-    void Swap(){
 
     }
     void AddStudent(ArrayList LastName, ArrayList Name, ArrayList Profession, ArrayList Weight){
@@ -194,7 +200,7 @@ public class AdditionalFunctionality extends Main {
         OutPut o=new OutPut();
         di.enter(LastName,Name,Profession,Weight);
         o.output(LastName,Name,Profession,Weight);
-        System.out.println("Изменения внесены!");
+        System.out.println("Changes applied!");
         Select(LastName,Name,Profession,Weight);
     }
     void DisplayedOnlyLastName(ArrayList LastName,ArrayList Name,ArrayList Profession,ArrayList Weight){
@@ -202,11 +208,11 @@ public class AdditionalFunctionality extends Main {
         boolean win=false;
         for (int i = 0; i < LastName.size(); i++) {
             System.out.print("№"+LastName.indexOf(LastName.get(i)));
-            System.out.print("    Фамилия:" + (LastName.get(i)));
+            System.out.print("    Lastname:" + (LastName.get(i)));
             System.out.println();
         }
         while (win != true) {
-            System.out.println("Выйти(1),вернуться в доп.функционал(2)");
+            System.out.println("Exit(1),return to additional functionality(2)");
             String str = sc.nextLine();
             try {
                 n = Integer.parseInt(str);
@@ -218,11 +224,12 @@ public class AdditionalFunctionality extends Main {
                         Select(LastName,Name,Profession,Weight);
                     }
                 }
-                else {
+                if(n<1&&n>2) {
+                    System.out.println("Try again!");
                     win=false;
                 }
             } catch (NumberFormatException e) {
-                System.out.println("Попробуйте еще раз!");
+                System.out.println("Try again!");
                 win = false;
             }
         }
@@ -230,50 +237,55 @@ public class AdditionalFunctionality extends Main {
     void DisplayedInformStudent(ArrayList LastName,ArrayList Name,ArrayList Profession,ArrayList Weight){
         boolean win=false;
         int n=0;
-        do {
-            System.out.print("Какую строку вы хотите вывести:");
-            String str = sc.nextLine();
-            try {
-                n = Integer.parseInt(str);
-                if (n >= 0 && n <= i) {
-                    win = true;
+            String s = null;
+            Pattern p = Pattern.compile("[0-9]{1}\\b");
+            Matcher l = null;
+        while (win!=true) {
+            do {
+                System.out.print("What line you want to display:");
+                s = sc.nextLine();
+                l = p.matcher(s);
+                if (!l.matches()) {
+                    System.out.println("Try again!");
                 }
-                else {
-                    System.out.println("Попробуйте еще раз!");
-                    win=false;
-                }
-            } catch (NumberFormatException e) {
-                System.out.println("Попробуйте еще раз!");
-                win= false;
+            } while (!l.matches());
+            n = Integer.parseInt(s);
+            if (n > LastName.size()&&n<0) {
+                System.out.println("Try again!");
             }
-        } while (winner != true);
-            System.out.print("№"+LastName.indexOf(LastName.get(n)));
-            System.out.print("    Фамилия:" + (LastName.get(n)));
-            System.out.print("    Имя:" + (Name.get(n)));
-            System.out.print("    Профессия:" + (Profession.get(n)));
-            System.out.print("    Вес:" + (Weight.get(n)) + "\n");
-        win=false;
-        while (win != true) {
-            System.out.println("Выйти(1),вернуться в доп.функционал(2)");
-            String str = sc.nextLine();
-            try {
-                n = Integer.parseInt(str);
-                if (n == 1 || n ==2) {
-                    if(n==1){
-                        System.exit(0);
-                    }
-                    if(n==2){
-                        Select(LastName,Name,Profession,Weight);
-                    }
-                }
-                else {
-                    win=false;
-                }
-            } catch (NumberFormatException e) {
-                System.out.println("Попробуйте еще раз!");
-                win = false;
+            else{
+                win=true;
             }
         }
+
+            System.out.print("№"+LastName.indexOf(LastName.get(n)));
+            System.out.print("    Lastname:" + (LastName.get(n)));
+            System.out.print("    Name:" + (Name.get(n)));
+            System.out.print("    Profession:" + (Profession.get(n)));
+            System.out.print("    Weight:" + (Weight.get(n)) + "\n");
+        win=false;
+            do {
+                System.out.println("Exit(1),return to additional functionality(2)");
+                String str = sc.nextLine();
+                try {
+                    n = Integer.parseInt(str);
+                    if (n == 1 || n == 2) {
+                        if (n == 1) {
+                            System.exit(0);
+                        }
+                        if (n == 2) {
+                            Select(LastName, Name, Profession, Weight);
+                        }
+                    } else {
+                        System.out.println("Try again!");
+                        win = false;
+                    }
+                } catch (NumberFormatException e) {
+                    System.out.println("Try again!");
+                    win = false;
+                }
+            }
+            while (win!=true);
 
     }
 
