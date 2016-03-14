@@ -6,3 +6,5 @@ class Greeter
     "Hello, #{@who}"
   end
 end
+
+2 change
