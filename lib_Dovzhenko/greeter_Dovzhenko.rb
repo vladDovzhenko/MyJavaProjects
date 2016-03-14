@@ -8,3 +8,5 @@ class Greeter
 end
 
 2 change
+
+3 change
